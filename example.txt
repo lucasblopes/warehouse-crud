@@ -1,0 +1,32 @@
+insere categories name="Eletrônicos"
+insere categories name="Acessórios"
+insere products name="Smartphone S23" code="S23-SAM" quantity=50 price=3499 category_id=1
+insere products name="Fone Bluetooth" code="FB-XT" quantity=100 price=199 category_id=2
+insere productdetails product_id=1 description="Smartphone Samsung com 128GB" location="Estoque A1" manufactor="Samsung"
+insere productdetails product_id=2 description="Fone sem fio com cancelamento de ruído" location="Estoque B2" manufactor="XT Audio"
+insere orders order_number="PED001" date="2025-04-23" status="Em_Andamento"
+insere orders order_number="PED002" date="2025-04-24" status="Pendente"
+insere orderitems order_id=1 product_id=1 quantity=2 unit_price=3499.00
+insere orderitems order_id=2 product_id=2 quantity=5 unit_price=199.00
+
+lista categories
+lista products
+lista productdetails
+lista orders
+lista orderitems
+
+altera products name="Smartphone S23" quantity=45
+altera productdetails product_id=1 location="Estoque A3"
+altera orders order_number="PED001" status="Finalizado"
+altera orderitems order_id=1 product_id=1 quantity=3
+
+exclui orderitems order_id=2 product_id=2
+exclui orders order_number="PED002"
+
+lista categories
+lista products
+lista productdetails
+lista orders
+lista orderitems
+
+exit
